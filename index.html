@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      function redirect() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // iOS detection
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = "https://info-meaow.vercel.app/";
+        }
+        // Android detection
+        else if (/android/i.test(userAgent)) {
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=com.zeeshan_raza.infotik&pcampaignid=web_share";
+        }
+        // Fallback URL for other devices or browsers
+        else {
+          window.location.href = "https://info-meaow.vercel.app/";
+        }
+      }
+    </script>
+  </head>
+  <body onload="redirect()">
+    <p>Redirecting...</p>
+  </body>
+</html>
